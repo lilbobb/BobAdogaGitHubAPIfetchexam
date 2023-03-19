@@ -14,8 +14,7 @@
 
       <div class="pagination">
         <button @click="state.currentPage--" :disabled="state.currentPage === 1" class="pagibtn">Previous</button>
-        <button @click="state.currentPage++" :disabled="state.currentPage === state.totalPages.length - 1"
-          class="pagibtn">Next</button>
+        <button @click="state.currentPage++" :disabled="state.currentPage === state.totalPages" class="pagibtn">Next</button>
       </div>
     </div>
   </div>
@@ -32,12 +31,12 @@ export default {
     const state = reactive({
       repositories: [],
       currentPage: 1,
-      perPage: 7,
+      perPage: 6,
       totalPages: 0
     })
 
     async function fetchRepositories() {
-      const response = await axios.get(`https://api.github.com/users/lilbobb/repos?per_page=${state.perPage}&page=${state.currentPage}`, {
+      const response = await axios.get('https://api.github.com/users/lilbobb/repos', {
         headers: {
           Authorization: `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`
         }
@@ -52,13 +51,13 @@ export default {
       return state.repositories.slice(start, end)
     })
 
-    function nextPage() {
+    const nextPage = () => {
       if (state.currentPage < state.totalPages) {
         state.currentPage++
       }
     }
 
-    function prevPage() {
+    const prevPage = () => {
       if (state.currentPage > 1) {
         state.currentPage--
       }
@@ -147,7 +146,7 @@ export default {
   color: #ffffff;
 }
 
-.btn{
+.btn {
   padding: 10px 20px;
   background-color: #a19c00;
   border: none;
@@ -162,6 +161,7 @@ export default {
   display: flex;
   justify-content: left;
 }
+
 .pagibtn {
   padding: 10px 20px;
   background-color: #383104;

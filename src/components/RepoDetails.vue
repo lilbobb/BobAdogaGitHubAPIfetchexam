@@ -83,7 +83,7 @@ button {
   padding: 20px;
   margin: 0 auto;
   max-width: 800px;
-  background-color: #eaf09e;
+  background-color: #f6fabe;
   color: #faf7a0;
   border-radius: 5px;
 
@@ -91,7 +91,7 @@ button {
 
 .repositories h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color:#cea100;
   border-bottom: 1px solid #051901;
   padding-bottom: 10px;

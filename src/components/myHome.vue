@@ -28,7 +28,7 @@ a:hover {
 }
 
 a:hover {
-  color: #e8df80;
+  color: #f5ea71;
 }
 
 .home {
@@ -36,11 +36,11 @@ a:hover {
   color: #031701;
   margin: 8em auto;
   text-align: center;
-  padding: 40px 0;
+  padding: 35px 0;
   line-height: 2em;
   max-width: 800px;
   font-weight: bold;
-  background: #f9ffd1;
+  background: calc(2 - 0.1 * 1);
 
 }
 
