@@ -43,9 +43,6 @@ Create a new component file (e.g., Repositories.vue) in the src/components direc
 In the component file, define a data object with an empty array for the repositories, and a currentPage variable to keep track of the current page number
 
 
-COPY
-
-COPY
 <template>
   <div>
     <div v-for="repo in repositories" :key="repo.id">
@@ -95,6 +92,8 @@ export default {
   },
 };
 </script>
+
+
 In the fetchRepositories method, we use fetch() to make an API request to the GitHub API, passing in the current page number and number of items per page
 
 We then append the fetched repositories to the repositories array using the spread operator
