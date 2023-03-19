@@ -35,7 +35,7 @@ export default {
     const state = reactive({
       repositories: [],
       currentPage: 1,
-      perPage: 6,
+      perPage: 4,
       totalPages: 0
     })
 
@@ -105,9 +105,10 @@ export default {
   align-items: center;
   margin: 20px;
   padding: 20px;
-  border-radius:  70px 20rem 10rem;
+  border-radius: 10px;
   background-color: #000000;
   box-shadow: 0 2px 10px #081a01;
+  
 }
 
 .repo ul {

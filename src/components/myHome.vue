@@ -53,7 +53,7 @@ a:hover {
   margin-bottom: 25px;
   opacity: calc(2 - 0.1 * 1);
   transition-delay: 0.1s;
-  transition: opacity 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .home p {
