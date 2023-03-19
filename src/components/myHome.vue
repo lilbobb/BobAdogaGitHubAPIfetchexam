@@ -33,14 +33,18 @@ a:hover {
 
 .home {
   font-family: 'Roboto', sans-serif;
-  color: #031701;
+  color: #021201;
   margin: 8em auto;
   text-align: center;
   padding: 35px 0;
   line-height: 2em;
   max-width: 800px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
   background: calc(2 - 0.1 * 1);
+  transition: 0.5s ease-in-out;
+
 
 }
 
@@ -60,20 +64,21 @@ a:hover {
 .home button {
   background: #134103;
   color: #f3f0f0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #4e4c0a;
   cursor: pointer;
   opacity: 1;
+  transition: 0.5s ease-in-out;
 
 }
 
 .home button:hover {
-  background: #645207;
+  background: #9a7b00;
   color: #f7f3f3;
-  font-size: 1rem;
+  font-size: 1.3rem;
 
 }
 

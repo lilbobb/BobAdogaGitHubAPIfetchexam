@@ -118,17 +118,18 @@ export default {
 .repo li {
   margin: 10px;
   padding: 2rem;
-  background-color: #374500;
+  background-color: #0a1a01;
   width: 40em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition-delay: calc(10s * var(--i));
 }
 
 .repo a {
   text-decoration: none;
   color: #f3e228;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -211,8 +212,10 @@ a {
 }
 
 .fa-brands {
-  color: #a9bc9a;
+  color: #ffffff;
   margin: 10px;
+  display: flex;
+  justify-content: left;
 
 }
 
