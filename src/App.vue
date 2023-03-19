@@ -16,17 +16,3 @@ export default {
   }
 }
 </script>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #110f01;
-  font-family: 'Roboto', sans-serif;
-  color: #ecede7;
-}
-
-</style>
