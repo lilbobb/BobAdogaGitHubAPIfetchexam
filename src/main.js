@@ -5,6 +5,8 @@ import myRepoList from "./components/myRepoList.vue";
 import RepoDetails from "./components/RepoDetails.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import pageNotFound from "./components/pageNotFound.vue";
+import '@fortawesome/fontawesome-free/css/all.css'
+
 
 const routerHistory = createWebHistory();
 

@@ -3,18 +3,22 @@
     <div>
       <div class="wrapdiv">
         <router-link to="/"><button class="btn"><i>GoToHomePage</i></button></router-link>
-        <h1 class="repohd">My GitHub Repositories</h1>
+        <h1 class="repohd"><i class="fa-brands fa-github"></i>My GitHub Repositories</h1>
         <ul v-for="repo in paginatedRepositories" :key="repo.id" class="repo">
           <li>
-            <a :href="repo.html_url">{{ repo.name }}</a>
-            <button @click="router.push(`/data/${repo.id}`)">View repo Details</button>
+            <a :href="repo.html_url">
+              {{ repo.name }}</a>
+          </li>
+          <li>
+            <button @click="router.push(`/data/${repo.id}`)">View repo Details<i class="fas fa-envelope"></i></button>
           </li>
         </ul>
       </div>
 
       <div class="pagination">
         <button @click="state.currentPage--" :disabled="state.currentPage === 1" class="pagibtn">Previous</button>
-        <button @click="state.currentPage++" :disabled="state.currentPage === state.totalPages" class="pagibtn">Next</button>
+        <button @click="state.currentPage++" :disabled="state.currentPage === state.totalPages"
+          class="pagibtn">Next</button>
       </div>
     </div>
   </div>
@@ -101,8 +105,9 @@ export default {
   align-items: center;
   margin: 20px;
   padding: 20px;
-  border-radius: 10px;
-  background-color: #041606;
+  border-radius:  70px 20rem 10rem;
+  background-color: #000000;
+  box-shadow: 0 2px 10px #081a01;
 }
 
 .repo ul {
@@ -203,6 +208,12 @@ a:hover {
 a {
   text-decoration: none;
   color: #000;
+}
+
+.fa-brands {
+  color: #a9bc9a;
+  margin: 10px;
+
 }
 
 button {
