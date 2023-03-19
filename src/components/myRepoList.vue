@@ -1,16 +1,16 @@
 <template>
   <div class="repositories">
-    <div class="homebtn">
-      <button @click="router.push('/')">Home</button>
-    </div>
-    <div class="innerdiv">
-      <h1 class="repohd">My GitHub Repositories</h1>
-      <ul v-for="repo in paginatedRepositories" :key="repo.id" class="repo">
-        <li>
-          <a :href="repo.html_url">{{ repo.name }}</a>
-          <button @click="router.push(`/data/${repo.id}`)">View repo Details</button>
-        </li>
-      </ul>
+    <div>
+      <div class="wrapdiv">
+        <router-link to="/"><button class="btn"><i>GoToHomePage</i></button></router-link>
+        <h1 class="repohd">My GitHub Repositories</h1>
+        <ul v-for="repo in paginatedRepositories" :key="repo.id" class="repo">
+          <li>
+            <a :href="repo.html_url">{{ repo.name }}</a>
+            <button @click="router.push(`/data/${repo.id}`)">View repo Details</button>
+          </li>
+        </ul>
+      </div>
 
       <div class="pagination">
         <button @click="state.currentPage--" :disabled="state.currentPage === 1" class="pagibtn">Previous</button>
@@ -85,32 +85,25 @@ export default {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #faf8ee;
-  font-family: 'Roboto', sans-serif;
-  color: #ece7e7;
-}
-
 .repohd {
   text-align: center;
-  font-size: 2rem;
+  font-weight: bold;
   margin: 20px;
-  padding: 20px;
-  background-color: #012005;
-  border-radius: 10px;
-  box-shadow: 0 1px 1px #d2cf71;
+  padding: 25px;
+  background-color: #000000;
+  color: #e2e1d5;
 }
 
 .repo {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 2em;
-  padding: 2em;
-  background-color: #060a00;
-  border-radius: 0.7em;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #041606;
 }
 
 .repo ul {
@@ -121,26 +114,29 @@ body {
 .repo li {
   margin: 10px;
   padding: 2rem;
-  border-radius: 0.5em;
-  background-color: #0d1301;
-  width: 25em;
+  background-color: #374500;
+  width: 40em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .repo a {
   text-decoration: none;
-  color: #275306;
+  color: #f3e228;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .repo button {
   padding: 10px 20px;
-  background-color: #b59d02;
+  background-color: #383104;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #0b1801;
+  color: #000000;
   font-size: large;
+  font-weight: bold;
   width: 100px;
   margin: 10px;
   box-shadow: 2px 0 6px #252400;
@@ -151,46 +147,43 @@ body {
   color: #ffffff;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.pagibtn {
+.btn{
   padding: 10px 20px;
-  background-color: #b59d02;
+  background-color: #a19c00;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  color: #fefefe;
+  font-weight: 600;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 2px 0 6px #252400;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: left;
+}
+.pagibtn {
+  padding: 10px 20px;
+  background-color: #383104;
+  border: none;
+  cursor: pointer;
   color: #0b1801;
   font-size: large;
-  width: 100px;
   margin: 10px;
   box-shadow: 2px 0 6px #252400;
 }
 
 .pagibtn:hover {
-  background-color: #283914;
-  color: #ffffff;
-}
-
-.homebtn {
-  text-align: center;
-  padding: 40px 0;
-  border: 1px solid #4f4402;
+  background-color: #b59d02;
+  color: #0b1801;
 }
 
 .homebtn button {
   padding: 10px 20px;
   background-color: #4d4d03;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #000000;
+  color: #d5ffab;
   width: 100px;
   margin: 10px;
 }
@@ -226,21 +219,23 @@ button {
 }
 
 button:hover {
-  background-color: #b59d02;
+  background-color: #ffdd00;
   color: #0b1801;
   box-shadow: 2px 0 6px #252400;
 }
 
 
 .repositories {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 960px;
+  margin: -20px auto;
   padding: 20px;
 }
 
 .repositories h1 {
-  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #efefef;
+
 }
 
 .repositories ul {
@@ -253,10 +248,6 @@ button:hover {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 0 6px #252400;
-}
-
-.repositories li:last-child {
-  margin-bottom: 0;
 }
 
 .repositories li a {
@@ -277,45 +268,10 @@ button:hover {
   margin-top: 20px;
 }
 
-.pagibtn {
-  padding: 10px 20px;
-  background-color: #b59d02;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #0b1801;
-  font-size: large;
-  width: 100px;
-  margin: 10px;
-  box-shadow: 2px 0 6px #252400;
-}
-
-.pagibtn:hover {
-  background-color: #b59d02;
-  color: #0b1801;
-  box-shadow: 2px 2px 6px #252400;
-}
-
-.pagination button:disabled {
-  background-color: #b59d02;
-  color: #0b1801;
-  box-shadow: 2px 0 6px #252400;
-}
-
 .pagination button:hover {
-  background-color: #b59d02;
+  background-color: #208103;
   color: #0b1801;
   box-shadow: 2px 0 6px #252400;
-}
-
-.pagination button:disabled:hover {
-  background-color: #b59d02;
-  color: #0b1801;
-  box-shadow: 2px 0 6px #252400;
-}
-
-.pagination button:disabled {
-  cursor: not-allowed;
 }
 
 .pagination button:disabled:hover {
@@ -340,7 +296,7 @@ button:hover {
   }
 
   .repositories li a {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .repositories li p {
@@ -368,4 +324,9 @@ button:hover {
     transition: 3s;
   }
 
-}</style>
+  .repo {
+    padding: 0;
+  }
+
+}
+</style>

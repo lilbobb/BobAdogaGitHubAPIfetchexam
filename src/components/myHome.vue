@@ -32,20 +32,21 @@ a:hover {
 }
 
 .home {
-  background-color: #000c02;
   font-family: 'Roboto', sans-serif;
-  color: #faf7a0;
-  margin: 10em auto;
+  color: #031701;
+  margin: 8em auto;
   text-align: center;
   padding: 40px 0;
   line-height: 2em;
   max-width: 800px;
+  font-weight: bold;
+  background: #f9ffd1;
 
 }
 
 .home h1 {
   font-size: 3.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   opacity: calc(2 - 0.1 * 1);
   transition-delay: 0.1s;
   transition: opacity 0.5s ease-in-out;
@@ -53,11 +54,11 @@ a:hover {
 
 .home p {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .home button {
-  background: #161201;
+  background: #134103;
   color: #f3f0f0;
   font-size: 1rem;
   padding: 10px 20px;
@@ -77,7 +78,7 @@ a:hover {
 }
 
 .home button:active {
-  background: #f1efef;
+  background: #051501;
   color: #f3f0f0;
 }
 

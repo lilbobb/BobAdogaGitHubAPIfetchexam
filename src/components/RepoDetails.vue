@@ -6,6 +6,9 @@
         <h3>Name: {{ data.name }}</h3>
       </li>
       <li>
+        <h3>Description: {{ data.description }}</h3>
+      </li>
+      <li>
         <h3>Forks: {{ data.forks }}</h3>
       </li>
       <li>
@@ -59,15 +62,13 @@ onMounted(fetchRepository);
   box-sizing: border-box;
 }
 
-body {
-  font-family: "roboto", sans-serif;
-  background-color: rgb(50, 50, 47);
-  color: #0c2703;
+a{
+  text-decoration: none;
 }
 
-a {
-  color: #122d03;
-  text-decoration: none;
+body {
+  font-family: Arial, Helvetica, sans-serif
+
 }
 
 button {
@@ -76,12 +77,16 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #000000;
+  color: #000;
 }
 .repositories {
   padding: 20px;
   margin: 0 auto;
   max-width: 800px;
+  background-color: #eaf09e;
+  color: #faf7a0;
+  border-radius: 5px;
+
 }
 
 .repositories h1 {
@@ -93,14 +98,18 @@ button {
 }
 
 .repositories h3 {
-  font-size: 1.25rem;
-  color: #e1fbd8;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  color: #cecece;
   padding: 1rem;
+  background-color: #051a01;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 1rem;
+  text-align: start;
 }
 
 .repositories ul {
-  list-style: none;
-  padding: 0;
   margin: 20px 0;
 }
 
