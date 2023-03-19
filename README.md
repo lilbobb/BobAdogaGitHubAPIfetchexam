@@ -43,55 +43,54 @@ Create a new component file (e.g., Repositories.vue) in the src/components direc
 In the component file, define a data object with an empty array for the repositories, and a currentPage variable to keep track of the current page number
 
 
-<template>
-  <div>
-    <div v-for="repo in repositories" :key="repo.id">
-      <h2>{{ repo.name }}</h2>
-      <p>{{ repo.description }}</p>
-      <p>Language: {{ repo.language }}</p>
-    </div>
-    <button @click="loadMore">Load more</button>
-  </div>
-</template>
+### <template>
+### <div>
+###  <div v-for="repo in repositories" :key="repo.id">
+###   <h2>{{ repo.name }}</h2>
+###  <p>{{ repo.description }}</p>
+  ###   <p>Language: {{ repo.language }}</p>
+ ###   </div>
+ ###   <button @click="loadMore">Load more</button>
+###  </div>
+###</template>
 
-<script>
-export default {
-  data() {
-    return {
-      repositories: [],
-      currentPage: 1,
-    };
-  },
+###<script>
+###export default {
+ ### data() {
+  ###  return {
+    ###  repositories: [],
+    ###  currentPage: 1,
+   ### };
+ ### },
 
-  methods: {
-    loadMore() {
-      this.currentPage++;
-      this.fetchRepositories();
-    },
+ ### methods: {
+ ###   loadMore() {
+  ###     this.fetchRepositories();
+  ###   },
 
-    fetchRepositories() {
-      const accessToken = "YOUR_ACCESS_TOKEN";
-      const username = "octocat";
-      const perPage = 10;
-      const url = `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${this.currentPage}`;
+  ###   fetchRepositories() {
+### const accessToken = "YOUR_ACCESS_TOKEN";
+   ###    const username = "octocat";
+   ###    const perPage = 10;
+   ###    const url = `https://api.github.com/users/${username}/repos?per_page=${perPage}&page=${this.currentPage}`;
 
-      fetch(url, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          this.repositories.push(...data);
-        });
-    },
-  },
+   ###    fetch(url, {
+   ###      headers: {
+    ###       Authorization: `Bearer ${accessToken}`,
+    ###     },
+    ###   })
+   ###      .then((response) => response.json())
+    ###     .then((data) => {
+    ###       this.repositories.push(...data);
+    ###     });
+   ###  },
+ ###  },
 
-  mounted() {
-    this.fetchRepositories();
-  },
-};
-</script>
+ ###  mounted() {
+ ###    this.fetchRepositories();
+ ###  },
+### };
+### </script>
 
 
 In the fetchRepositories method, we use fetch() to make an API request to the GitHub API, passing in the current page number and number of items per page
@@ -105,27 +104,28 @@ Finally, we call fetchRepositories in the mounted hook to load the initial page 
 Use the component in your Vue.js app
 
 In your main Vue.js app (App.vue), import the Repositories component and use it in the template:
-<template>
 
-<div>
+### <template>
 
-<Repositories />
+### <div>
 
-</div>
+######<Repositories />
 
-</template>
+###</div>
 
-<script>
+###</template>
 
-import Repositories from "./components/Repositories.vue";
+###<script>
 
-export default {
+###import Repositories from "./components/Repositories.vue";
 
-components: { Repositories, },
+###export default {
 
-};
+###components: { Repositories, },
 
-</script>
+###};
+
+###</script>
 
 This code displays the first 10 repositories of the user "octocat" and a "Load more" button that fetches the next page of repositories when clicked
 
