@@ -33,7 +33,7 @@ a:hover {
 
 .home {
   font-family: 'Roboto', sans-serif;
-  color: #021201;
+  color: #031d01;
   margin: 8em auto;
   text-align: center;
   padding: 35px 0;
@@ -44,8 +44,6 @@ a:hover {
   font-weight: bold;
   background: calc(2 - 0.1 * 1);
   transition: 0.5s ease-in-out;
-
-
 }
 
 .home h1 {
