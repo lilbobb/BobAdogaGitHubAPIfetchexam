@@ -28,7 +28,7 @@
       </li>
     </ul>
     <button>
-      <router-link to="/myRepoList">Previous</router-link>
+      <router-link to="/myRepoList" class="btnn">Previous</router-link>
     </button>
 
   </div>
@@ -59,6 +59,8 @@ onMounted(fetchRepository);
 
 <style scoped>
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -67,24 +69,30 @@ a{
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif
+  font-family: "Roboto" sans-serif;
 
 }
 
-button {
+ .btnn{
+  background-color: #036501;
+  color: #f1fcff;
   padding: 10px 20px;
-  background-color: #8c7303;
-  border: none;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
-  color: #000;
-}
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;}
+
 .repositories {
   padding: 20px;
   margin: 0 auto;
   max-width: 800px;
-  background-color: #f6fabe;
-  color: #faf7a0;
+  background-color: #f1fcff;
   border-radius: 5px;
 
 }
@@ -92,29 +100,26 @@ button {
 .repositories h1 {
   text-align: center;
   font-size: 2.5rem;
-  color:#cea100;
+  color:#036501;
   border-bottom: 1px solid #051901;
   padding-bottom: 10px;
+  box-shadow: 0 2px 2px #051901;
 }
 
 .repositories h3 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
-  color: #cecece;
   padding: 1rem;
-  background-color: #051a01;
-  padding: 1.5rem;
+  background-color: #c3f9c7;
+  padding: 1.6em;
   border-radius: 5px;
-  margin: 1rem;
+  margin: .1rem;
   text-align: start;
-}
-
-.repositories ul {
-  margin: 20px 0;
 }
 
 .repositories li {
   margin: 10px 0;
+  list-style: none;
 }
 
 .pagination {

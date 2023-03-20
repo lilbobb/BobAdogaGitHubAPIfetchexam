@@ -8,6 +8,7 @@
           <li>
             <a :href="repo.html_url">
               {{ repo.name }}</a>
+
           </li>
           <li>
             <button @click="router.push(`/data/${repo.id}`)">View repo Details<i class="fas fa-envelope"></i></button>
@@ -106,7 +107,6 @@ export default {
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #000000;
   box-shadow: 0 2px 10px #081a01;
   
 }
@@ -119,7 +119,7 @@ export default {
 .repo li {
   margin: 10px;
   padding: 2rem;
-  background-color: #0a1a01;
+  background-color: #4d7b41;
   width: 40em;
   display: flex;
   justify-content: space-between;
@@ -136,11 +136,11 @@ export default {
 
 .repo button {
   padding: 10px 20px;
-  background-color: #383104;
+  background-color: #bef8a8;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #000000;
+  color: #010f05;
   font-size: large;
   font-weight: bold;
   width: 100px;
@@ -155,7 +155,7 @@ export default {
 
 .btn {
   padding: 10px 20px;
-  background-color: #a19c00;
+  background-color: #4a8a4e;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -166,12 +166,12 @@ export default {
   box-shadow: 2px 0 6px #252400;
   margin-bottom: 0px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .pagibtn {
   padding: 10px 20px;
-  background-color: #383104;
+  background-color: #7ca46d;
   border: none;
   cursor: pointer;
   color: #0b1801;
@@ -181,18 +181,8 @@ export default {
 }
 
 .pagibtn:hover {
-  background-color: #b59d02;
+  background-color: #fddb00;
   color: #0b1801;
-}
-
-.homebtn button {
-  padding: 10px 20px;
-  background-color: #4d4d03;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #d5ffab;
-  width: 100px;
-  margin: 10px;
 }
 
 a:link,
@@ -220,18 +210,6 @@ a {
 
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #b59d02;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #0b1801;
-  font-size: large;
-  width: 100px;
-  margin: 10px;
-  box-shadow: 2px 0 6px #252400;
-}
 
 button:hover {
   background-color: #ffdd00;
@@ -262,7 +240,7 @@ button:hover {
   border: 1px solid #4f4402;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 2px 0 6px #252400;
+  box-shadow: 2px 0 6px #fffdd6;
 }
 
 .repositories li a {
